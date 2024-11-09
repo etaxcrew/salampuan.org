@@ -1,5 +1,20 @@
 <?php
 
+use HTMLPurifier;
+use HTMLPurifier_Config;
+
+if (!function_exists('clean_html')) {
+    function clean_html($content)
+    {
+        $config = HTMLPurifier_Config::createDefault();
+        $config->set('HTML.Allowed', 'p,b,i,u,a[href|title],ul,ol,li,img[src|alt|width|height]');
+
+        $purifier = new HTMLPurifier($config);
+
+        return $purifier->purify($content);
+    }
+}
+
 if (! function_exists('formatPrice')) {
     /**
      * formatPrice
