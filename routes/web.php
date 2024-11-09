@@ -9,6 +9,8 @@ Route::get('/', [FrontController::class, 'index'])->name('front.index');
 
 Route::get('/berita/{post:slug}', [FrontController::class, 'details'])->name('front.post.details');
 
+Route::get('/profil', [FrontController::class, 'profil'])->name('front.profil');
+
 /**
  * route for admin
  */
@@ -33,6 +35,10 @@ Route::prefix('admin')->group(function () {
 
         //post
         Route::resource('/post', PostController::class, ['except' => ['show'], 'as' => 'admin']);
+
+        //gallery
+        Route::resource('/gallery', GalleryController::class, ['except' => ['show'], 'as' => 'admin']);
+
 
     });
 });

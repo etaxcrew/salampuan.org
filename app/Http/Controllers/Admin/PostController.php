@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
-//use Mews\Purifier\Facades\Purifier;
+use Mews\Purifier\Facades\Purifier;
 use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
@@ -51,9 +51,7 @@ class PostController extends Controller
             'title'       => $request->input('title'),
             'slug'        => Str::slug($request->input('title'), '-'),
             'category_id' => $request->input('category_id'),
-            'content'     => clean_html($request->input('content')),
-
-            //'content'     => Purifier::clean($request->input('content')),
+            'content'     => Purifier::clean($request->input('content')),
             'publish'     => $request->publish
         ]);
 
@@ -88,7 +86,7 @@ class PostController extends Controller
                 'title'       => $request->input('title'),
                 'slug'        => Str::slug($request->input('title'), '-'),
                 'category_id' => $request->input('category_id'),
-                //'content'     => Purifier::clean($request->input('content')),
+                'content'     => Purifier::clean($request->input('content')),
                 'publish'     => $request->publish
             ]);
         } else {
@@ -106,7 +104,7 @@ class PostController extends Controller
                 'title'       => $request->input('title'),
                 'slug'        => Str::slug($request->input('title'), '-'),
                 'category_id' => $request->input('category_id'),
-                //'content'     => Purifier::clean($request->input('content')),
+                'content'     => Purifier::clean($request->input('content')),
                 'publish'     => $request->publish
             ]);
         }

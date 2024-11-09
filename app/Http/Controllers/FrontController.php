@@ -13,7 +13,6 @@ class FrontController extends Controller
         $berita = Post::with('category')->orderBy('id', 'DESC')->take(3)->get();
 
         return view('front.index', compact('berita'));
-
     }
 
     public function details(Post $post)
@@ -21,5 +20,11 @@ class FrontController extends Controller
         return view('front.details', [
             'post' => $post,
         ]);
+    }
+
+    public function profil()
+    {
+
+        return view('front.profil');
     }
 }

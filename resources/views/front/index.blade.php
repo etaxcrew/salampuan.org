@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 
     <!--====== Title ======-->
-    <title>Salampuan - Sahabt Anak, Perempuan & Keluarga</title>
+    <title>Salampuan - Sahabat Anak, Perempuan & Keluarga</title>
 
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -87,7 +87,7 @@
                                         <a class="page-scroll" href="#services">Layanan</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#gallery">Kegiatan</a>
+                                        <a class="page-scroll" href="#gallery">Galeri</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#blog">Berita</a>
@@ -201,7 +201,7 @@
                         <p>Salampuan adalah Lembaga Sahabat Anak, Perempuan dan Keluarga. Bergerak dan berdaya untuk kemaslahatan anak-anak, perempuan dan keluarga.</p>
                         <h5 class="growth_title mt-25 mb-10">Visi Kami</h5>
                         <p class="mt-0 mb-25">Terciptanya Pemenuhan, Perbaikan, Perlindungan Perempuan dan Anak berbasis Keluarga dan Masyarakat serta Pengokohan Keluarga sebagai pilar Masyarakat</p>
-                        <a class="more" href="#">Lihat Profil Singkat<i class="lni lni-chevron-right"></i></a>
+                        <a class="more" href="/profil">Lihat Profil Singkat<i class="lni lni-chevron-right"></i></a>
                     </div> <!-- about content -->
                 </div>
             </div> <!-- row -->
@@ -302,7 +302,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="section_title text-center pb-15">
-                        <h4 class="sub_title">Kegiatan</h4>
+                        <h4 class="sub_title">Galeri</h4>
                         <h3 class="title">Galeri Kegiatan</h3>
                     </div> <!-- section title -->
                 </div>
@@ -366,14 +366,14 @@
                 <div class="col-lg-6">
                     <div class="single_blog mt-30">
                         <div class="blog_image">
-                            <img src="{{ $blog->image }}" alt="{{ $blog->title }}">
+                            <img src="{{ $blog->image }}" alt="{{ $blog->title }}"" height="405px">
                         </div>
                         <div class="blog_content">
                             <h4 class="blog_title">
-                                <a href="{{ route('front.post.details', $blog->slug) }}">{{ substr($blog->title, 0, 66) }}{{ strlen($blog->title) > 66 ? '...' : '' }}</a>
+                                <a href="{{ route('front.post.details', $blog->slug) }}">{{ substr($blog->title, 0, 60) }}{{ strlen($blog->title) > 60 ? '...' : '' }}</a>
                             </h4>
                             <p>
-                                {{ substr($blog->content, 0, 66) }}{{ strlen($blog->content) > 66 ? '...' : '' }}
+                                {{ substr($blog->content, 0, 150) }}{{ strlen($blog->content) > 150 ? '...' : '' }}
                             </p>
                             <a class="more" href="{{ route('front.post.details', $blog->slug) }}">Read More
                                 <i class="lni lni-chevron-right"></i>
@@ -382,33 +382,8 @@
                     </div>  <!-- single_blog -->
                 </div>
                 @empty
-                <p>Belum ada berita</p>
+                <div>Belum ada berita</div>
                 @endforelse
-
-                {{-- <div class="col-lg-6">
-                    <div class="single_blog mt-30">
-                        <div class="blog_image">
-                            <img src="{{asset('web/images/blog-1.jpg')}}" alt="blog">
-                        </div>
-                        <div class="blog_content">
-                            <h4 class="blog_title"><a href="#">After Action Review (AAR) Respon Banjir Ramah Anak di Gorontalo</a></h4>
-                            <p>Pada bulan Juli hingga September 2024, Salam Puan bersama mitra Save the Children Indonesia (STC), telah melaksanakan rangkaian kegiatan penting dalam upaya merespon dampak bencana banjir yang ...</p>
-                            <a class="more" href="#">Read More <i class="lni lni-chevron-right"></i></a>
-                        </div>
-                    </div>  <!-- single_blog -->
-                </div> --}}
-                {{-- <div class="col-lg-6">
-                    <div class="single_blog mt-30">
-                        <div class="blog_image">
-                            <img src="{{asset('web/images/blog-2.jpg')}}" alt="blog">
-                        </div>
-                        <div class="blog_content">
-                            <h4 class="blog_title"><a href="#">How to Make Your Strategy Work</a></h4>
-                            <p>Lorem ipsum dolor aconsetet dorem ipsum Lorem ipsum doaconsetet dorem empor inviduntsadipscing elitr, sed diamn numy eirmo tempor invidunt empor inviduntsadipscing elitr ...</p>
-                            <a class="more" href="#">Read More <i class="lni lni-chevron-right"></i></a>
-                        </div>
-                    </div>  <!-- single_blog -->
-                </div> --}}
 
             </div> <!-- row -->
         </div> <!-- container -->

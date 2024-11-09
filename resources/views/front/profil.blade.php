@@ -104,30 +104,46 @@
             </div> <!-- container -->
         </div> <!-- header navbar -->
 
+        <div class="page-banner bg_cover" style="background-image: url({{asset('web/images/page-banner.jpg')}}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="page-banner-content wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+                            <h4 class="page-title"><b>Tentang Salampuan</b></h4>
+                            <h5>Sahabat Anak, Perempuan & Keluarga</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </header>
 
-    <div class="growth_area pt-50 pb-30">
+    <div class="about_area pt-30 pb-50 blue-bg">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <div class="growth_content mt-100">
-                        <div class="section_title ">
-                            <h4 class="sub_title">{{ TanggalID($post->publish) }}</h4>
-                            <h3 class="title">{{ $post->title }}</h3>
+                <div class="col-lg-7">
+                    <div class="about_image mt-50">
+                        <img src="{{asset('web/images/tes-removebg-preview.png')}}" alt="about image">
+                        <div class="about_shape">
+                            <img src="{{asset('web/images/shape-1.svg')}}" alt="shape">
+                        </div> <!-- about shape -->
+                    </div> <!-- about image -->
+                </div>
+                <div class="col-lg-5">
+                    <div class="about_content mt-45">
+                        <div class="section_title">
+                            <h4 class="sub_title">Tentang Salampuan</h4>
+                            <h3 class="title">Sahabat Anak, Perempuan & Keluarga</h3>
                         </div> <!-- section title -->
-
-                        <div class="mt-25 pb-15">
-                            <img src="{{ $post->image }}" alt="{{ $post->title }}" width="100%" height="650px">
-                        </div>
-                        <p>{!! Purifier::clean($post->content) !!}</p>
-
-                    </div> <!-- section title -->
+                        <p>Salampuan adalah Lembaga Sahabat Anak, Perempuan dan Keluarga. Bergerak dan berdaya untuk kemaslahatan anak-anak, perempuan dan keluarga.</p>
+                        <h5 class="growth_title mt-25 mb-10">Visi Kami</h5>
+                        <p class="mt-0 mb-25">Terciptanya Pemenuhan, Perbaikan, Perlindungan Perempuan dan Anak berbasis Keluarga dan Masyarakat serta Pengokohan Keluarga sebagai pilar Masyarakat</p>
+                        <a class="more" href="/profil">Lihat Profil Singkat<i class="lni lni-chevron-right"></i></a>
+                    </div> <!-- about content -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
-        <div class="growth_shape">
-            <img class="shape" src="{{asset('web/images/shape-2.svg')}}" alt="shape">
-        </div>
     </div>
 
     <!--====== FOOTER PART START ======-->
