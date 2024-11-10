@@ -35,6 +35,35 @@
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="{{asset('web/css/style.css')}}">
 
+    <style rel="stylesheet">
+        .list-wrap {
+            padding: 40px;
+            background-color: #d8b9c3;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        div.list {
+            counter-reset: list-number;
+        }
+
+        div.list div:before {
+            counter-increment: list-number;
+            content: counter(list-number);
+
+            margin-right: 10px;
+            margin-bottom: 10px;
+            width: 35px;
+            height: 35px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            background-color: #d7385e;
+            border-radius: 50%;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,17 +109,17 @@
                                     <li class="nav-item">
                                         <a class="page-scroll" href="/">Beranda</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="/#about">Tentang</a>
+                                    <li class="nav-item active">
+                                        <a class="page-scroll" href="">Tentang</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="/#services">Layanan</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="/#gallery">Galeri</a>
-                                    </li>
-                                    <li class="nav-item active">
                                         <a class="page-scroll" href="/#blog">Berita</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="/galeri-kegiatan">Kegiatan</a>
                                     </li>
                                 </ul>
                             </div> <!-- navbar collapse -->
@@ -104,25 +133,56 @@
             </div> <!-- container -->
         </div> <!-- header navbar -->
 
-        <div class="page-banner bg_cover" style="background-image: url({{asset('web/images/page-banner.jpg')}}">
+        {{-- <div class="page-banner bg_cover" style="background-image: url({{asset('web/images/page-banner.jpg')}}">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="page-banner-content wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
                             <h4 class="page-title"><b>Tentang Salampuan</b></h4>
-                            <h5>Sahabat Anak, Perempuan & Keluarga</h5>
+                            <h4>Sahabat Anak, Perempuan & Keluarga</h4>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
+        </div> --}}
     </header>
 
-    <div class="about_area pt-30 pb-50 blue-bg">
+    <!--====== ABOUT PART START ======-->
+    <section id="about" class="about_area pt-100 pb-50 blue-bg">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7">
+                    <div class="about_content mt-45">
+                        <div class="section_title">
+                            <h4 class="sub_title">Tentang Salampuan</h4>
+                            <h3 class="title">Sahabat Anak, Perempuan & Keluarga</h3>
+                        </div> <!-- section title -->
+                        <p>Salampuan adalah Lembaga Sahabat Anak, Perempuan dan Keluarga. Bergerak dan berdaya untuk
+                            kemaslahatan anak-anak, perempuan dan keluarga.</p>
+                        <h5 class="growth_title mt-25 mb-10">Visi Kami</h5>
+                        <p class="mt-0 mb-25">Terciptanya Pemenuhan, Perbaikan, Perlindungan Perempuan dan Anak berbasis
+                            Keluarga dan Masyarakat serta Pengokohan Keluarga sebagai pilar Masyarakat</p>
+                        <h5 class="growth_title mt-25 mb-10">Misi Kami</h5>
+                        <div class="list-wrap">
+                            <div class="list">
+                                <div>Membentuk Ketahanan Keluarga</div>
+                                <div>Menjalin kerjasama dengan gerakan perempuan, remaja, anak dan keluarga di seluruh
+                                    dunia
+                                </div>
+                                <div>Memperjuangkan dan melakukan pembelaan terhadap perempuan dan anak, terutama kelas
+                                    marjinal dan tertindas</div>
+                                <div>Memajukan, membela dan meningkatkan kesadaran pengokohan keluarga sebagai pilar
+                                    masyarakat</div>
+                                <div>Melakukan berbagai ikhtiar lain yang sah dan tidak bertentangan dengan asas dan
+                                    tujuan
+                                    perserikatan</div>
+                            </div>
+                        </div>
+
+
+                    </div> <!-- about content -->
+                </div>
+                <div class="col-lg-5">
                     <div class="about_image mt-50">
                         <img src="{{asset('web/images/tes-removebg-preview.png')}}" alt="about image">
                         <div class="about_shape">
@@ -130,21 +190,9 @@
                         </div> <!-- about shape -->
                     </div> <!-- about image -->
                 </div>
-                <div class="col-lg-5">
-                    <div class="about_content mt-45">
-                        <div class="section_title">
-                            <h4 class="sub_title">Tentang Salampuan</h4>
-                            <h3 class="title">Sahabat Anak, Perempuan & Keluarga</h3>
-                        </div> <!-- section title -->
-                        <p>Salampuan adalah Lembaga Sahabat Anak, Perempuan dan Keluarga. Bergerak dan berdaya untuk kemaslahatan anak-anak, perempuan dan keluarga.</p>
-                        <h5 class="growth_title mt-25 mb-10">Visi Kami</h5>
-                        <p class="mt-0 mb-25">Terciptanya Pemenuhan, Perbaikan, Perlindungan Perempuan dan Anak berbasis Keluarga dan Masyarakat serta Pengokohan Keluarga sebagai pilar Masyarakat</p>
-                        <a class="more" href="/profil">Lihat Profil Singkat<i class="lni lni-chevron-right"></i></a>
-                    </div> <!-- about content -->
-                </div>
             </div> <!-- row -->
         </div> <!-- container -->
-    </div>
+    </section>
 
     <!--====== FOOTER PART START ======-->
     <footer id="footer" class="footer_area">
@@ -177,7 +225,8 @@
                             <ul class="social">
                                 <li><a href="#"><i class="lni lni-facebook-filled"></i></a></li>
                                 <li><a href="#"><i class="lni lni-twitter-original"></i></a></li>
-                                <li><a href="https://www.instagram.com/salampuan/"><i class="lni lni-instagram-original"></i></a></li>
+                                <li><a href="https://www.instagram.com/salampuan/"><i
+                                            class="lni lni-instagram-original"></i></a></li>
                             </ul>
                         </div> <!-- footer about -->
                     </div>
@@ -203,7 +252,8 @@
                     </div>
                 </div> <!-- row -->
             </div> <!-- footer wrapper -->
-            <p class="text-center pb-30">&copy; 2024. SalamPuan.org | Designed by <a href="https://uideck.com" rel="nofollow">UIdeck</a> </p>
+            <p class="text-center pb-30">&copy; 2024. SalamPuan.org | Designed by <a href="https://uideck.com"
+                    rel="nofollow">UIdeck</a> </p>
         </div> <!-- container -->
     </footer>
 

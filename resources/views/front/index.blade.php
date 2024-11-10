@@ -87,10 +87,10 @@
                                         <a class="page-scroll" href="#services">Layanan</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#gallery">Galeri</a>
+                                        <a class="page-scroll" href="#blog">Berita</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#blog">Berita</a>
+                                        <a class="page-scroll" href="/galeri-kegiatan">Kegiatan</a>
                                     </li>
                                 </ul>
                             </div> <!-- navbar collapse -->
@@ -157,29 +157,6 @@
         </div> <!-- header slider -->
     </header>
 
-    <!--====== BRAND PART START ======-->
-    {{-- <section class="brand_area pt-30 pb-50">
-        <div class="container">
-            <div class="brand_single d-flex flex-wrap justify-content-center justify-content-md-between">
-                <div class="single_brand ">
-                    <img src="{{asset('web/images/brand-1.png')}}" alt="brand">
-                </div> <!-- single brand -->
-                <div class="single_brand">
-                    <img src="{{asset('web/images/brand-2.png')}}" alt="brand">
-                </div> <!-- single brand -->
-                <div class="single_brand">
-                    <img src="{{asset('web/images/brand-3.png')}}" alt="brand">
-                </div> <!-- single brand -->
-                <div class="single_brand">
-                    <img src="{{asset('web/images/brand-4.png')}}" alt="brand">
-                </div> <!-- single brand -->
-                <div class="single_brand">
-                    <img src="{{asset('web/images/brand-5.png')}}" alt="brand">
-                </div> <!-- single brand -->
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section> --}}
-
     <!--====== ABOUT PART START ======-->
     <section id="about" class="about_area pt-30 pb-50 blue-bg">
         <div class="container">
@@ -209,7 +186,7 @@
     </section>
 
     <!--====== SERVICES PART START ======-->
-    <section id="services" class="services_area pt-95">
+    <section id="services" class="services_area pt-95 pb-80">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -296,58 +273,38 @@
         </div> <!-- container -->
     </section>
 
-    <!--====== CASE PART START ======-->
-    <section id="gallery" class="case_area pt-95 pb-50">
+    <section class="analysis-area pt-95 pb-120">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="section_title text-center pb-15">
-                        <h4 class="sub_title">Galeri</h4>
-                        <h3 class="title">Galeri Kegiatan</h3>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
+            <div class="analysis-counter">
+                <div class="row">
+                    <div class="col-md-3 col-6">
+                        <div class="single-analysis-counter mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
+                            <span class="count"><span class="counter">20</span><span class="plus">+</span></span>
+                            <p class="text">Anggota</p>
+                        </div> <!-- single counter -->
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="single-analysis-counter mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <span class="count"><span class="counter">27</span><span class="plus">+</span></span>
+                            <p class="text">Relawan</p>
+                        </div> <!-- single counter -->
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="single-analysis-counter mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                            <span class="count"><span class="counter">31</span><span class="plus">+</span></span>
+                            <p class="text">Mitra</p>
+                        </div> <!-- single counter -->
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="single-analysis-counter mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+                            <span class="count"><span class="counter">2867</span><span class="plus">+</span></span>
+                            <p class="text">Penerima Manfaat</p>
+                        </div> <!-- single counter -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- analysis counter -->
         </div> <!-- container -->
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="single_case mt-30">
-                        <div class="case_image">
-                            <img src="{{asset('web/images/gallery-1.jpeg')}}" height="319px" alt="case">
-                        </div>
-                        <div class="case_content">
-                            <h5 class="case_title"><a href="#">Pembersihan Sekolah Pasca Bencana: Sekolah Berlian</a></h5>
-                            {{-- <a class="more" href="#">Read More <i class="lni lni-chevron-right"></i></a> --}}
-                        </div>
-                    </div> <!-- single case -->
-                </div>
-                <div class="col-lg-4">
-                    <div class="single_case mt-30">
-                        <div class="case_image">
-                            <img src="{{asset('web/images/gallery-2.jpeg')}}" height="319px" alt="case">
-                        </div>
-                        <div class="case_content">
-                            <h5 class="case_title"><a href="#">Konseling dan Asesmen Psikologis untuk Anak dan Ibu Hamil</a></h5>
-                            {{-- <a class="more" href="#">Read More <i class="lni lni-chevron-right"></i></a> --}}
-                        </div>
-                    </div> <!-- single case -->
-                </div>
-                <div class="col-lg-4">
-                    <div class="single_case mt-30">
-                        <div class="case_image">
-                            <img src="{{asset('web/images/slider-2.jpeg')}}" height="319px" alt="case">
-                        </div>
-                        <div class="case_content">
-                            <h5 class="case_title"><a href="#">Distribusi Paket Back to School Kit dan Perlengkapan Kesehatan</a></h5>
-                            {{-- <a class="more" href="#">Read More <i class="lni lni-chevron-right"></i></a> --}}
-                        </div>
-                    </div> <!-- single case -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container fluid -->
     </section>
-
-    <!--====== TESTIMONIAL PART ENDS ======-->
 
     <!--====== BLAG PART START ======-->
     <section id="blog" class="blog_area pt-95 pb-100">
@@ -471,6 +428,10 @@
     <!--====== Scrolling Nav js ======-->
     <script src="{{asset('web/js/jquery.easing.min.js')}}"></script>
     <script src="{{asset('web/js/scrolling-nav.js')}}"></script>
+
+    <!--====== Counter Up js ======-->
+    <script src="{{asset('web/js/waypoints.min.js')}}"></script>
+    <script src="{{asset('web/js/jquery.counterup.min.js')}}"></script>
 
     <!--====== WOW js ======-->
     <script src="{{asset('web/js/wow.min.js')}}"></script>

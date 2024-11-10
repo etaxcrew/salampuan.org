@@ -81,16 +81,16 @@
                                         <a class="page-scroll" href="/">Beranda</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="/#about">Tentang</a>
+                                        <a class="page-scroll" href="/profil">Tentang</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="/#services">Layanan</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="/#gallery">Galeri</a>
-                                    </li>
                                     <li class="nav-item active">
                                         <a class="page-scroll" href="/#blog">Berita</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="page-scroll" href="/galeri-kegiatan">Kegiatan</a>
                                     </li>
                                 </ul>
                             </div> <!-- navbar collapse -->
@@ -106,7 +106,7 @@
 
     </header>
 
-    <div class="growth_area pt-50 pb-30">
+    <div class="growth_area pt-65 pb-30">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12">
