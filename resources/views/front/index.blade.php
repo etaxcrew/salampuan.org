@@ -320,6 +320,7 @@
             <div class="row">
 
                 @forelse ($berita as $blog)
+                <?php $baca = Purifier::clean($blog->content); ?>
                 <div class="col-lg-6">
                     <div class="single_blog mt-30">
                         <div class="blog_image">
@@ -330,7 +331,7 @@
                                 <a href="{{ route('front.post.details', $blog->slug) }}">{{ substr($blog->title, 0, 60) }}{{ strlen($blog->title) > 60 ? '...' : '' }}</a>
                             </h4>
                             <p>
-                                {{ substr($blog->content, 0, 150) }}{{ strlen($blog->content) > 150 ? '...' : '' }}
+                                {!! substr($baca, 0, 150) !!}{!! strlen($baca) > 150 ? '...' : '' !!}
                             </p>
                             <a class="more" href="{{ route('front.post.details', $blog->slug) }}">Read More
                                 <i class="lni lni-chevron-right"></i>
