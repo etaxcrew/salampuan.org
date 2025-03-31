@@ -71,7 +71,7 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini di lin
 - Pengelolaan berita dan galeri
 - Dukungan frontend modern dengan FancyBox untuk tampilan galeri
 
-## Kontribusi
+## Contributing
 
 Jika ingin berkontribusi dalam pengembangan proyek ini, silakan buat pull request atau diskusikan melalui issues di GitHub.
 
